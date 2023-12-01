@@ -16,7 +16,7 @@ class Login extends CI_Controller {
 		}
 	}
 
-	function authentikasi(){
+	function autentikasi(){
 		$email = $this->input->post('email');
 		$password = $this->input->post('pass');
 
@@ -68,7 +68,7 @@ class Login extends CI_Controller {
 	}
 
 	function logout(){
-		$this->session->session_destroy();
+		$this->session->sess_destroy();
 		$url = base_url('login');
 		redirect($url);
 	}
